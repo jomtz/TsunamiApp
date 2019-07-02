@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                     jsonResponse = readFromStream(inputStream);
                 }
             } catch (IOException e) {
-                // TODO: Handle the exception
+                Log.e(LOG_TAG, "Error Response code: " + urlConnection.getResponseCode());
             } finally {
                 if (urlConnection != null) {
                     urlConnection.disconnect();
